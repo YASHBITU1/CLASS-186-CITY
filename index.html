@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<htmL><head>
+    <title>PARTICLES</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-spe-particles-component@1.0.4/dist/aframe-spe-particles-component.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="city" src="./city_paris/scene.gltf"></a-asset-item>
+        </a-assets>
+        <a-sky color="black">
+
+        </a-sky>
+        <a-camera position="0 0 0"></a-camera>
+        <a-entity id="city1" gltf-model="#city" position="-1 -12 10" scale="10 10 10" rotation="0 0 0"></a-entity>
+
+        <a-entity position="0 3 -20" spe-particles="color:red,yellow,blue;distribution:sphere;radius:2;velocity:1;particle-count:1000;velocity-spread:10;size:1 1 1;randomise-velocity:true;duration:-1;blending:additive;active-multiplier:1000;drag:2;max-age:3"></a-entity>
+        <a-entity position="-10 3 -20" spe-particles="color:red,yellow,blue;distribution:sphere;radius:2;velocity:1;particle-count:1000;velocity-spread:10;size:1 1 1;randomise-velocity:true;duration:-1;blending:additive;active-multiplier:15;drag:2;max-age:3"></a-entity>
+    </a-scene>
+</body>
+
+</htmL>
